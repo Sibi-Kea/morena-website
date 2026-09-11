@@ -271,6 +271,31 @@ a { text-decoration: none; }
   transform: translateY(-6px) rotate(-45deg);
 }
 
+@media (max-width: 991.98px) {
+  .navbar-nexora,
+  .navbar-nexora.scrolled {
+    padding: 0.75rem 0;
+    background: var(--n-white);
+    backdrop-filter: none;
+    box-shadow: var(--n-shadow-sm);
+    max-height: 100vh;
+    max-height: 100dvh;
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
+  }
+
+  .navbar-nexora .navbar-collapse {
+    padding-bottom: 0.5rem;
+  }
+
+  .navbar-nexora .nav-link {
+    color: var(--n-navy) !important;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+}
+
 /* =====================================================
    HERO
    ===================================================== */
@@ -592,6 +617,29 @@ a { text-decoration: none; }
 
 .portfolio-overlay h5 { color: #fff; margin-bottom: 0.25rem; }
 .portfolio-overlay span { color: rgba(255,255,255,0.7); font-size: 0.85rem; }
+
+/* Reach captions stay readable on touch screens and before hover. */
+.reach-card {
+  aspect-ratio: auto;
+  height: 100%;
+  background: var(--n-white);
+  border: 1px solid var(--n-border);
+}
+
+.reach-card img {
+  display: block;
+  aspect-ratio: 3 / 2;
+  height: auto;
+  object-fit: cover;
+}
+
+.reach-card:hover img { transform: none; }
+
+.reach-card-caption { padding: 1.25rem 1.5rem; }
+.reach-card-caption span { color: var(--n-slate); font-size: 0.85rem; }
+.reach-card-caption h5 { color: var(--n-navy); margin: 0.35rem 0 0; }
+.reach-card:hover h5 { color: var(--n-primary); }
+.reach-card:focus-visible { outline: 3px solid var(--n-primary); outline-offset: 4px; }
 
 /* Testimonial card */
 .testimonial-card {
